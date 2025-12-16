@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>This page needs your location</h3>
+<button onclick="getLocation()">Allow</button>
+
+<script>
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(pos => {
+    document.body.innerHTML =
+      "Latitude: " + pos.coords.latitude +
+      "<br>Longitude: " + pos.coords.longitude;
+  });
+}
+</script>
+</body>
+</html> 
